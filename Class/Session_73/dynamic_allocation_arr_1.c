@@ -21,6 +21,9 @@
 #include <stdlib.h>
 
 void summation_of_array(int *p_arr, int size_of_array, int *summation);
+void accept_data(int *p_arr, int size_of_array);
+void display_summation(int *summation);
+void display_accepted_array(int *p_arr, int size_of_array);
 
 int main(void)
 {
@@ -45,9 +48,10 @@ int main(void)
 		exit(-1);
 	}
 
+	accept_data(p_arr, size_of_array);
+	display_accepted_array(p_arr, size_of_array);
 	summation_of_array(p_arr, size_of_array, &sum);
-
-	printf("The summation of array elements are : %d\n", sum);
+	display_summation(&sum);
 
 	free(p_arr);
 	p_arr = 0;
@@ -55,7 +59,7 @@ int main(void)
 	exit(0);
 }
 
-void summation_of_array(int *p_arr, int size_of_array, int *summation)
+void accept_data(int *p_arr, int size_of_array)
 {
 	int i;
 	for (i = 0; i < size_of_array; ++i)
@@ -63,13 +67,26 @@ void summation_of_array(int *p_arr, int size_of_array, int *summation)
 		printf("Enter the %d (element) : ", i + 1);
 		scanf("%d", (p_arr + i));
 	}
+}
 
+void display_accepted_array(int *p_arr, int size_of_array)
+{
+	int i;
 	puts("Accepted array are as follow : ");
 	for (i = 0; i < size_of_array; ++i)
 	{
 		printf("*(p_arr + %d) : %d\n", i, *(p_arr + i));
 	}
+}
 
+void display_summation(int *summation)
+{
+	printf("The summation of array elements are : %d\n", *summation);
+}
+
+void summation_of_array(int *p_arr, int size_of_array, int *summation)
+{
+	int i;
 	for (i = 0; i < size_of_array; ++i)
 	{
 		*summation = *summation + *(p_arr + i);
