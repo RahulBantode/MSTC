@@ -1,0 +1,354 @@
+/*
+    1.13 Write conditions in words.
+    -----------------------------------------------------------
+    e.g
+    [1] rs = (a > b) || (c <= d) || (d == e);
+
+    ANS:
+    rs is assigned to the evaluation of
+    a is greater than b
+    OR
+    c is less than or equal to d
+    OR
+    d is equal to e.
+
+    [2] rs = !(a > b)
+
+    ANS:
+    rs is assigned to evaluation of
+    not of a is greater than b
+    -----------------------------------------------------------
+*/
+
+1.  rs = a > b;
+->
+    rs is assigned to the evaluation of
+    a is greater than b
+
+2.  rs = a < b;
+->
+    rs is assigned to the evaluation of 
+    a is less than b
+
+3.  rs = a >= b;
+->
+    rs is assigned to the evaluation of
+    a is greater than or equal to b
+
+4.  rs = a <= b;
+->  
+    rs is assigned to the evaluation of
+    a is less than or equal to b
+
+5.  rs = a == b;
+->
+    rs is assigned to the evalution of 
+    a is equal to equal to b
+
+6.  rs = a != b;
+->
+    rs is assigned to the evaluation of
+    a is not equal to be
+
+7.  rs = d > e;
+->
+    rs is assigned to the evaluation of
+    d is greater than e
+
+8.  rs = d < e;
+->
+    rs is assigned to the evaluation of
+    d is less than e
+
+9.  rs = d >= e
+->
+    rs is assigned to the evaluation of 
+    d is greater than or equal to e
+
+10. rs = d <= e
+->
+    rs is assigned to the evaluation of
+    d is less than or equal to e 
+
+11. rs = d == e
+->
+    rs is assigned to the evaluation of
+    d is equal to equal to e 
+
+12. rs = d != e 
+->
+    rs is assigned to the evaluation of
+    d is not equal to e 
+
+13. rs = f && f
+->
+    rs is assigned to the evaluation of
+    f AND f
+
+14. rs = f && g 
+->
+    rs is assigned to the evaluation of  
+    f AND g 
+
+15. rs = g && f
+->
+    rs is assinged to the evaluation of 
+    g AND f 
+
+16. rs = g && g 
+->
+    rs is assinged to the evaluation of 
+    g AND g 
+
+17. rs = f || f
+->
+    rs is assinged to the evaluation of
+    f OR f
+
+18. rs = f || g
+->
+    rs is assinged to the evaluation of
+    f OR g 
+
+19. rs = g || f 
+-> 
+    rs is assinged to the evaluation of
+    g OR f 
+
+20. rs = g || g
+->
+    rs is assinged to the evaluation of
+    g OR g 
+
+21. rs = !f
+-> 
+    rs is assinged to the evaluation of
+    not f 
+
+22. rs = !g 
+->
+    rs is assinged to the evaluation of
+    not g 
+
+23. rs = !f && !g 
+-> 
+    rs is assinged to the evaluation of
+    not f 
+    AND 
+    not g 
+
+24. rs = !f || !g 
+->
+    rs is assinged to the evaluation of
+    not f 
+    OR 
+    not g
+
+25. rs = f && g || e 
+-> 
+    rs is assinged to the evaluation of
+    f AND g OR e 
+
+26. rs = f && (!g || e) 
+->
+    rs is assinged to the evaluation of
+    f AND (not g OR e)
+
+27. rs = f || g && e;
+->
+    rs is assinged to the evaluation of
+    f OR g AND e 
+
+28. rs = (f || g) && e 
+->
+    rs is assinged to the evaluation of
+    f OR g 
+    AND 
+    e 
+
+29. rs = (f && g) || (!f && !g)
+->
+    rs is assinged to the evaluation of
+    f AND g 
+    OR 
+    (not f AND not g)
+
+30. rs = (f || g) && (f || g);
+->
+    rs is assinged to the evaluation of
+    f OR g 
+    AND 
+    f OR g 
+
+31. rs = (f && !g) || (!f && g)
+->
+    rs is assinged to the evaluation of
+    f AND not g 
+    OR 
+    not f AND g 
+
+32. rs = (f || !g) && (!f || g)
+->
+    rs is assinged to the evaluation of
+    f OR not g
+    AND 
+    not f OR g 
+
+33. rs = !(a > b)
+->
+    rs is assinged to the evaluation of
+    not (a is greater than b)
+
+34. rs = !(a >= b)
+->
+    rs is assinged to the evaluation of
+    not (a is greater than or equal to b)
+
+35. rs = !(a < b)
+->
+    rs is assinged to the evaluation of
+    not (a is less than b)
+
+36. rs = !(a <= b)
+->
+    rs is assinged to the evaluation of
+    not (a is less than or equal to b)
+
+37. rs = !(a == b)
+->
+    rs is assinged to the evaluation of
+    not ( a is equal to equal to b)
+
+38. rs = !(a != b)
+->
+    rs is assinged to the evaluation of
+    not ( a is not equal to b)
+
+39. rs = !(d == e)
+->
+    rs is assinged to the evaluation of
+    not ( d is equal to equal to e)
+
+40. rs = !(d != e)
+->
+    rs is assinged to the evaluation of
+    not (d is not equal to e)
+
+41. rs = (a > b) && (c > d)
+->
+    rs is assinged to the evaluation of
+    a is greater than b 
+    AND 
+    c is greater than d 
+
+42. rs = !((a > b) && (c > d))
+->
+    rs is assinged to the evaluation of
+    not ( 
+            (a is greater than b)
+            AND 
+            (c is greater than d)
+        )
+
+43. rs = !(a > b) || !(c > d);
+->
+    rs is assinged to the evaluation of
+    not ( a is greater than b)
+    OR 
+    not ( c is greater than d)
+
+44. rs = (a <= b) || (c <= d)
+->
+    rs is assinged to the evaluation of
+    a is less than or equal to b 
+    OR 
+    c is less than or equal to d 
+
+45. rs = (a > b) || (c > d)
+->
+    rs is assinged to the evaluation of
+    a  is greater than b
+    OR 
+    c is greater than d 
+
+46. rs = !( (a > b) || (c > d))
+->
+    rs is assinged to the evaluation of
+    not (
+            (a is greater than b)
+            OR 
+            (c is greater than d)
+        )
+
+47. rs = !(a > b) && !(c > d)
+->
+    rs is assinged to the evaluation of
+    not ( a is greater than b)
+    AND 
+    not ( c is greater than d)
+
+48. rs = (a <= b) && (c <= d)
+->
+    rs is assinged to the evaluation of
+    a is less than or equal to b 
+    AND 
+    c is less than or equal to d
+
+49. rs = (a > b) || (c <= d) || (d == e)
+->
+    rs is assigned to the evaluation of
+    a is greater than b 
+    OR 
+    c is less than or equal to d 
+    OR 
+    d is equal to equal to e 
+
+50. rs =  (a < b) && (c > d) && (d == e)
+->
+    rs is assigned to the evaluation of
+    a is less than b
+    AND 
+    c is greater than d 
+    AND 
+    d is equal to equal to e 
+
+51. rs = !(a < b) && !(c > d) && !(d == e)
+->
+    rs is assigned to the evaluation of 
+    not ( a is less than b)
+    AND
+    not ( c is greater than d )
+    AND 
+    not ( d is equal to equal to e)
+
+52. rs = !(a < b) || !(c > d) || !(d == e)
+->
+    rs is assigned to the evaluation of 
+    not ( a is less than b)
+    OR 
+    not ( c is greater than d)
+    OR 
+    not ( d is equal to equal to e)
+
+53. rs =  (a == b) || (b == c) || (c == d) || (d == e)
+->
+    rs is assinged to the evaluation of
+    a is equal to equal to b 
+    OR 
+    b is equal to equal to c 
+    OR 
+    c is equal to equal to d 
+    OR 
+    d is equal to equal to e 
+
+54. rs = (a == b) && (b == c) && (c == d) && (d == e)
+-> 
+    rs is assigned to the evaluation of 
+    a is equal to equal to b 
+    AND
+    b is equal to equal to c 
+    AND
+    c is equal to equal to d 
+    AND 
+    d is equal to equal to e 
+ 
