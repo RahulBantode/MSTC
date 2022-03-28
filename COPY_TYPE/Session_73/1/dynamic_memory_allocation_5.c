@@ -27,6 +27,7 @@ struct A
     int n;
     short s;
     long int m;
+    char* z;
 };
 
 int main(void)
@@ -41,12 +42,16 @@ int main(void)
         exit(-1);
     }
 
-    ptr->n = 100;
-    ptr->s = 2;
-    ptr->m = 3423;
+    printf("Enter the string : ");
+    scanf("%s",ptr->z);
+    
+    printf("%s\n",ptr->z);    
+    // ptr->n = 100;
+    // ptr->s = 2;
+    // ptr->m = 3423;
 
-    printf("ptr->n = %d | ptr->s = %hd | ptr->m = %ld\n",
-           ptr->n, ptr->s, ptr->m);
+    // printf("ptr->n = %d | ptr->s = %hd | ptr->m = %ld\n",
+    //        ptr->n, ptr->s, ptr->m);
 
     exit(0);
 }
