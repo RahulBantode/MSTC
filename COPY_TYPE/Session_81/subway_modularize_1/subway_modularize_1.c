@@ -130,7 +130,7 @@ int main(void)
   printf("Add capsicum?[1:Yes,0:No]:");
   scanf("%d", &b_ans);
   if (b_ans == 1)
-    choice_of_veggies |= SUB_VEG_CUCUMBER;
+    choice_of_veggies |= SUB_VEG_CAPSICUM;
   printf("Add onions?[1:Yes,0:No]:");
   scanf("%d", &b_ans);
   if (b_ans == 1)
